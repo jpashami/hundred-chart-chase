@@ -216,8 +216,9 @@ function App() {
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-center">
             <p className="text-sm text-blue-800 leading-relaxed">
               🎓 <strong>Free Educational Software</strong><br />
-              A fun way for kids to learn number recognition, spatial reasoning, and strategic thinking!
-              This game helps children develop math skills while playing with friends and family.
+              Build a mental model of our number system! This game helps students understand how numbers grow
+              and recognize patterns in groups of 10. Practice counting forward and backward by 1s and 10s
+              while developing strategic thinking skills.
             </p>
             <p className="text-xs text-blue-600 mt-2">Free forever • Open Source • Made with ❤️ for learning</p>
           </div>
@@ -355,8 +356,9 @@ function App() {
             </ul>
             <div className="mt-3 pt-3 border-t border-blue-200">
               <p className="text-xs text-blue-700">
-                <strong>Educational Benefits:</strong> This game helps children develop number recognition (1-100),
-                spatial awareness, pattern recognition, and strategic thinking skills.
+                <strong>Educational Benefits:</strong> Build a mental model of the number system by seeing how numbers
+                grow and recognizing patterns in groups of 10. Practice counting forward and backward by 1s and 10s,
+                use benchmarks to place numbers accurately, and develop strategic reasoning skills.
               </p>
             </div>
           </div>

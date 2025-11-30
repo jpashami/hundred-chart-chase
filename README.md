@@ -51,12 +51,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **This software is provided "as-is" and is free forever.**
 
 ## Educational Purpose
-Hundred Chart Chase is designed as a free educational tool to help children:
--   **Master Number Recognition**: Practice identifying numbers 1-100
--   **Develop Spatial Reasoning**: Understand rows, columns, and diagonal patterns
--   **Build Strategic Thinking**: Plan moves ahead and block opponents
--   **Enhance Memory Skills**: Remember number positions on the grid
--   **Practice Mental Math**: Quickly calculate and recognize number sequences
+Hundred Chart Chase is designed as a free educational tool that helps students build a mental model of our number system. Through gameplay, children learn to see how numbers grow and recognize the patterns that each group of 10 follows.
+
+**Learning Goals:**
+-   **Build Number Sense**: Develop a mental model of the number system (1-100) by understanding how numbers are organized and relate to each other
+-   **Practice Counting Strategies**: Count forward and backward by 1s and 10s from any starting point on the hundreds chart
+-   **Use Benchmarks**: Learn to accurately place numbers on the chart using reference points and patterns
+-   **Strategic Reasoning**: Apply problem-solving skills to determine number placement and plan moves ahead
+-   **Pattern Recognition**: Discover and use the repeating patterns in our base-10 number system
 
 Perfect for classrooms, homeschooling, or family game nights!
 
