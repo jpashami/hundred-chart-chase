@@ -166,6 +166,14 @@ function App() {
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 font-sans">
         <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
           <h1 className="text-3xl font-bold text-center mb-6 text-indigo-600">Hundred Chart Chase</h1>
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 text-center">
+            <p className="text-sm text-blue-800 leading-relaxed">
+              🎓 <strong>Free Educational Software</strong><br />
+              A fun way for kids to learn number recognition, spatial reasoning, and strategic thinking!
+              This game helps children develop math skills while playing with friends and family.
+            </p>
+            <p className="text-xs text-blue-600 mt-2">Free forever • Open Source • Made with ❤️ for learning</p>
+          </div>
           <form onSubmit={handleStartGame} className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-2">Number of Players</label>
@@ -176,8 +184,8 @@ function App() {
                     type="button"
                     onClick={() => setNumPlayers(n)}
                     className={`flex-1 py-2 rounded-lg border transition-all ${numPlayers === n
-                        ? 'bg-indigo-600 text-white border-indigo-600 shadow-md'
-                        : 'bg-white text-slate-600 border-slate-200 hover:border-indigo-300'
+                      ? 'bg-indigo-600 text-white border-indigo-600 shadow-md'
+                      : 'bg-white text-slate-600 border-slate-200 hover:border-indigo-300'
                       }`}
                   >
                     {n}
@@ -282,7 +290,7 @@ function App() {
           </div>
 
           <div className="bg-blue-50 p-4 rounded-xl text-blue-800 text-sm leading-relaxed">
-            <strong>How to play:</strong>
+            <strong>📚 How to play:</strong>
             <ul className="list-disc ml-4 mt-2 space-y-1">
               <li>Click a cell to select it.</li>
               <li>Guess the hidden number correctly to claim the spot.</li>
@@ -290,6 +298,12 @@ function App() {
               <li>Scored numbers cannot be used again.</li>
               <li>Game ends when the board is full. Highest score wins!</li>
             </ul>
+            <div className="mt-3 pt-3 border-t border-blue-200">
+              <p className="text-xs text-blue-700">
+                <strong>Educational Benefits:</strong> This game helps children develop number recognition (1-100),
+                spatial awareness, pattern recognition, and strategic thinking skills.
+              </p>
+            </div>
           </div>
         </div>
 

@@ -46,7 +46,17 @@ A fun, interactive multiplayer game where players race to find patterns on a 100
 4.  Open your browser to the URL shown (usually `http://localhost:5173`).
 
 ## License
-This project uses open-source packages.
--   React (MIT)
--   Vite (MIT)
--   Tailwind CSS (MIT)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**This software is provided "as-is" and is free forever.**
+
+## Educational Purpose
+Hundred Chart Chase is designed as a free educational tool to help children:
+-   **Master Number Recognition**: Practice identifying numbers 1-100
+-   **Develop Spatial Reasoning**: Understand rows, columns, and diagonal patterns
+-   **Build Strategic Thinking**: Plan moves ahead and block opponents
+-   **Enhance Memory Skills**: Remember number positions on the grid
+-   **Practice Mental Math**: Quickly calculate and recognize number sequences
+
+Perfect for classrooms, homeschooling, or family game nights!
+
