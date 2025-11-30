@@ -23,6 +23,9 @@ function App() {
   const [guessInput, setGuessInput] = useState('');
   const [guessError, setGuessError] = useState(false);
 
+  // Test Mode
+  const [testMode, setTestMode] = useState(false);
+
   useEffect(() => {
     setPlayerConfig(prev => {
       const newConfig = [...prev];
@@ -161,6 +164,50 @@ function App() {
     return players.reduce((prev, current) => (prev.score > current.score) ? prev : current);
   };
 
+  const autoFillBoard = () => {
+    // Confirm before auto-filling
+    const confirmed = window.confirm(
+      '🧪 TEST MODE\n\nThis will automatically fill the entire board and end the game.\n\nAre you sure you want to continue?'
+    );
+
+    if (!confirmed) return;
+
+    // Test mode: Auto-fill the board with random player selections
+    const newBoard = [...boardData];
+    const emptyIndices = [];
+
+    for (let i = 0; i < 100; i++) {
+      if (newBoard[i] === null) {
+        emptyIndices.push(i);
+      }
+    }
+
+    let currentPlayer = currentPlayerIndex;
+
+    emptyIndices.forEach(index => {
+      const playerId = players[currentPlayer].id;
+      newBoard[index] = { playerId, scored: false };
+
+      // Check for wins
+      const { newLines, cellsToMarkScored } = checkWinCondition(index, newBoard, playerId);
+
+      if (newLines.length > 0) {
+        players[currentPlayer].score += newLines.length;
+        cellsToMarkScored.forEach(idx => {
+          if (newBoard[idx]) newBoard[idx].scored = true;
+        });
+        setWinningLines(prev => [...prev, ...newLines]);
+      }
+
+      currentPlayer = (currentPlayer + 1) % players.length;
+    });
+
+    setBoardData(newBoard);
+    setPlayers([...players]);
+    setGameState('finished');
+  };
+
+
   if (gameState === 'setup') {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 font-sans">
@@ -284,6 +331,14 @@ function App() {
                   className="mt-6 w-full py-2 text-slate-500 hover:text-red-600 text-sm font-medium transition-colors"
                 >
                   End Game & Restart
+                </button>
+
+                {/* Test Mode Button */}
+                <button
+                  onClick={autoFillBoard}
+                  className="w-full py-2 bg-purple-100 text-purple-700 hover:bg-purple-200 text-sm font-medium rounded-lg transition-colors border border-purple-300"
+                >
+                  🧪 Test Mode: Auto-Fill Board
                 </button>
               </div>
             )}
